@@ -20,7 +20,7 @@
     
     
       
-        <title>Ignition Module Development - Everything In One Place</title>
+        <title>Ignition module development - Everything In One Place</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ignition-module-development" class="md-skip">
+        <a href="#getting-started" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ignition Module Development
+              Ignition module development
             
           </span>
         </div>
@@ -632,14 +632,12 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    Ignition Module Development
+    Ignition module development
   </span>
   
 
@@ -650,7 +648,7 @@
         
   
   <span class="md-ellipsis">
-    Ignition Module Development
+    Ignition module development
   </span>
   
 
@@ -661,8 +659,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -1145,8 +1141,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1230,7 +1224,8 @@
                   
 
 
-<h1 id="ignition-module-development">Ignition Module Development</h1>
+  <h1>Ignition module development</h1>
+
 <h2 id="getting-started">Getting Started</h2>
 <h3 id="required-software">Required Software</h3>
 <ul>
@@ -1248,71 +1243,58 @@
 <ul>
 <li>Install latest Java JDK</li>
 <li>Download latest Maven and unzip</li>
-<li>Add the following "\bin" folders for Java SDK and Maven to Environment Variable "Path" (based on where each was installed):<ul>
+<li>Add the following "\bin" folders for Java SDK and Maven to Environment Variable "Path" (based on where each was installed):</li>
 <li>C:\Program Files\Java\jdk1.8.0_112\bin</li>
 <li>C:\development\apache-maven-3.3.9\bin</li>
+<li>Run the following from command line to set JAVA_HOME to the root of the Java SDK folder:</li>
 </ul>
-</li>
-<li>
-<p>Run the following from command line to set JAVA_HOME to the root of the Java SDK folder:</p>
-<p><code>SET JAVA_HOME=C:\Program Files\Java\jdk1.8.0_112</code></p>
-</li>
-</ul>
+<pre><code class="language-shell">SET JAVA_HOME=C:\Program Files\Java\jdk1.8.0_112
+</code></pre>
 <hr />
 <h2 id="module-signing">Module Signing</h2>
 <h3 id="generate-java-keystore">Generate Java Keystore</h3>
 <ul>
-<li>
-<p>Switch to directory where keytool.exe is installed (JDK or JRE install location):</p>
-<p><code>cd C:\Program Files\Java\jdk1.8.0_112\bin</code></p>
-</li>
+<li>Switch to directory where keytool.exe is installed (JDK or JRE install location):</li>
+</ul>
+<pre><code class="language-shell">cd C:\Program Files\Java\jdk1.8.0_112\bin
+</code></pre>
+<ul>
 <li>
 <p>Generate keystore and create a self-signed certificate in the keystore:</p>
 <p><code>keytool -genkey -keyalg RSA -alias selfsigned -keystore keystore.jks -storepass Kotter16 -validity 360 -keysize 2048</code></p>
 </li>
 <li>
 <p>Answer the prompts similar to the following:</p>
-<p>```
-What is your first and last name?
-    [Unknown]:  PM7510F.ecseng.com
-What is the name of your organizational unit?
-    [Unknown]:  Ignition Development
+<p>```shell
+What is your first and last name?</p>
+<p>What is the name of your organizational unit?
+  <a href="US">Unknown</a>:  Ignition Development
 What is the name of your organization?
-    [Unknown]:  ECS Solutions
-What is the name of your City or Locality?
-    [Unknown]:  Evansville
-What is the name of your State or Province?
-    [Unknown]:  Indiana
-What is the two-letter country code for this unit?
-    [Unknown]:  US
-Is CN=PM7510F.ecseng.com, OU=Ignition Development, O=ECS Solutions, L=Evansville, ST=Indiana, C=US correct?
-    [no]:  yes</p>
-<p>Enter key password for <selfsigned> (RETURN if same as keystore password):</p>
-<p>```</p>
+  <a href="US">Unknown</a>:  ECS Solutions
+What is the name of your City or Locality?</p>
+<p>What is the name of your State or Province?</p>
+<p>What is the two-letter country code for this unit?</p>
+<p>Is CN=PM7510F.ecseng.com, OU=Ignition Development, O=ECS Solutions, L=Evansville, ST=Indiana, C=US correct?</p>
+<p>Enter key password for <selfsigned> (RETURN if same as keystore password):
+```</p>
 </li>
 <li>
 <p>The "keystore.jks" file will be created in the same directory as the keytool.exe</p>
-<ul>
-<li>Note: I moved the file to "C:\development\keystore"</li>
-</ul>
 </li>
+<li>Note: I moved the file to "C:\development\keystore"</li>
 </ul>
 <h3 id="export-the-self-signed-certificate-p7b">Export the self-signed certificate (*.p7b)</h3>
 <ul>
 <li>Run KeyStore Explorer utility</li>
-<li>The following steps are based on the settings used in the command above to generate the Java Keystore:<ul>
+<li>The following steps are based on the settings used in the command above to generate the Java Keystore:</li>
 <li>Open the "keystore.jks" utility and enter the password.</li>
 <li>Right-click on the "selfsigned" certificate and click "Export|Export Certificate Chain"</li>
 <li>Use the following options:<ul>
 <li>Export Length: Entire Chain</li>
 <li>Export Format: PKCS #7</li>
 <li>PEM (default): True </li>
-<li>Export File (default): C:\development\keystore\selfsigned.p7b<ul>
+<li>Export File (default): C:\development\keystore\selfsigned.p7b</li>
 <li>Note: This path will be used below when invoking the Ignition Module Signer tool</li>
-</ul>
-</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -1321,36 +1303,32 @@ Is CN=PM7510F.ecseng.com, OU=Ignition Development, O=ECS Solutions, L=Evansville
 <li>
 <p>Get the Ignition Module Signer tool
 For guidance setting up your development environment, refer to the Ignition SDK Programmer's Guide. Specifically, the following <a href="https://github.com/inductiveautomation/module-signer">section</a>.</p>
-<ul>
+</li>
 <li>
 <p>Switch to directory where the Ignition Module Signing Git repository should be cloned:</p>
-<p><code>cd c:\development\git</code></p>
+<p><code>shell
+cd c:\development\git</code></p>
 </li>
 <li>
 <p>Clone the Git repository (I used Git for Windows):</p>
-<p><code>git clone https://github.com/inductiveautomation/module-signer.git</code></p>
-</li>
-</ul>
+<p><code>shell
+ git clone https://github.com/inductiveautomation/module-signer.git</code></p>
 </li>
 <li>
 <p>Build the Ignition Module Signer tool using Eclipse</p>
-<ul>
+</li>
 <li>Open the <em>module-signer</em> project in your IDE from the folder you cloned the project to in the step above.</li>
 <li>Clean, compile, install the project to generate the .jar file in the "target" folder of the project</li>
-</ul>
-</li>
-<li>
-<p>Invoke the Ignition Module Signer tool</p>
-<ul>
+<li>Invoke the Ignition Module Signer tool</li>
 <li>
 <p>Switch to the directory with the module-signer jar file:</p>
-<p><code>cd C:\development\git\module-signer\target</code></p>
-</li>
-</ul>
+<p><code>shell
+cd C:\development\git\module-signer\target</code></p>
 </li>
 <li>
 <p>Sign your module using a command similar to one shown below. Note: This is the command used to build the DVR module, you will need to change the file paths and .modl file names based on your setup.</p>
-<p><code>java ^
+<p><code>shell
+java ^
     -jar module-signer-1.0.0-SNAPSHOT-jar-with-dependencies.jar ^
     -keystore=C:\development\keystore\keystore.jks ^
     -keystore-pwd=Kotter16 -alias=selfsigned ^

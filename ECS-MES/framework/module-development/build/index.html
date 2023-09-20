@@ -700,7 +700,7 @@
         
   
   <span class="md-ellipsis">
-    Ignition Module Development
+    Ignition module development
   </span>
   
 
@@ -1189,26 +1189,26 @@
 <li>IntelliJ IDEA runs the selected goal and displays the result in the <strong>Run</strong> tool window.</li>
 </ol>
 <h2 id="sign-the-module">Sign the Module</h2>
-<p>To sign the module, we will use the <strong>Ignition Module Signer</strong> tool.  If you have not already done so, complete the steps outlined in the <strong>Module Signing</strong> section of the <a href="">How-To: Ignition Module Development</a> guide.</p>
+<p>To sign the module, we will use the <strong>Ignition Module Signer</strong> tool.  If you have not already done so, complete the steps outlined in the <strong>Module Signing</strong> section of the <a href="/How-To/ignition/ignition-module-development/">How-To: Ignition Module Development</a> guide.</p>
 <p>Once you have the tool, switch to the directory where the tool resides: </p>
-<pre><code>cd C:\development\git\module-signer\target
+<pre><code class="language-cmd">cd C:\development\git\module-signer\target
 </code></pre>
 <p>Use the command below to create a signed version of the module:</p>
-<pre><code>```
-java ^
+<pre><code class="language-cmd">java ^
     -jar module-signer-1.0.0-SNAPSHOT-jar-with-dependencies.jar ^
     -keystore=C:\development\keystore\keystore.jks ^
-    -keystore-pwd=Kotter16 -alias=selfsigned ^
-    -alias-pwd=Kotter16 ^
+    -keystore-pwd=&lt;password-here&gt; -alias=selfsigned ^
+    -alias-pwd=&lt;password-here&gt; ^
     -chain=C:\development\keystore\selfsigned.p7b ^
     -module-in=C:\Users\todd.miller\source\repos\ecs-mes\ecs-mes-build\target\ecs-mes-unsigned.modl ^
-    -module-out=C:\Users\todd.miller\source\repos\ecs-mes\ecs-mes-build\target\ecs-mes-signed.modl
-```
+    -module-out=C:\Users\todd.miller\source\repos\ecs-mes\ecs-mes-build\target\ecs-mes.modl
 </code></pre>
 <p>Note the <code>^</code> character was added to allow multi-line pasting into the Windows Command Prompt.</p>
-<p>You may need to modify the command above based on:
-- Your keystore and self-signed certificate information.
-- The location of your local repository.</p>
+<p>You may need to modify the command above based on:</p>
+<ul>
+<li>Your keystore and self-signed certificate information.</li>
+<li>The location of your local repository.</li>
+</ul>
 
 
 
