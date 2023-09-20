@@ -1,0 +1,13 @@
+# Everything In One Place
+
+Here is the collective sum of everything I know that I have stopped long enough to write about.
+
+## ECS-MES
+Th **ECS-MES** project was designed to be a *simple* OEE & Downtime Tracking application built using Ignition.  In this section, you will find docs related to the following areas:
+
+- Solution Architecture
+- Deployment - install and configure
+- Software Design
+
+## How-To's
+Things that I do on a routine (or as-needed) basis are documented in this section.
