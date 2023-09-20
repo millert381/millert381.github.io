@@ -2,7 +2,7 @@ site_name: Everything In One Place
 theme: 
     name: material
     palette: 
-        - primary: custom
+        - primary: ecs
         - accent: red
 
         # Palette toggle for dark mode
