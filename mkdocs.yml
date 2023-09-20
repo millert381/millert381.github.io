@@ -4,7 +4,7 @@ theme:
     palette: 
         # Palette toggle for dark mode
         - scheme: slate
-          primary: ecs
+          primary: red
           accent: red
           toggle:
             icon: material/brightness-4
@@ -12,7 +12,7 @@ theme:
 
         # Palette toggle for light mode
         - scheme: default
-          primary: ecs
+          primary: red
           accent: red
           toggle:
             icon: material/brightness-7 
