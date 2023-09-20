@@ -1,4 +1,14 @@
+## How to fix orphaned SQL Server users
+
+> **Source:** [How to fix orphaned SQL Server users](https://www.fileformat.info/tip/microsoft/sql_orphan_user.htm)
+> **Author:** Unknown
+> **Publication Date:** Unknown
+
+## Summary
+
 When you restore a Microsoft SQL Server database on a different machine, you cannot access the database until you fix the permissions.
+
+## Detail
 
 The problem is that the user in the database is an **orphan**. This means that there is no login id or password associated with the user. This is true even if there is a login id that matches the user, since there is a GUID (called a SID in Microsoft-speak) that has to match as well.
 
@@ -25,5 +35,3 @@ If you want to create a new login id and password for this user, fix it by doing
 ```sql
 EXEC sp_change_users_login 'Auto_Fix', 'user', 'login', 'password'
 ```
-
-Here is the [linkk](https://www.fileformat.info/tip/microsoft/sql_orphan_user.htm) to the original article.

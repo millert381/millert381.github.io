@@ -15,7 +15,7 @@ Let me explain this issue demonstrating simple example.
 ```sql
 USE AdventureWorks
 GO
--- Creating Test Table
+-- Creating a Test Table
 CREATE TABLE Product(Cust VARCHAR(25), Product VARCHAR(20), QTY INT)
 GO
 -- Inserting Data into Table
@@ -124,4 +124,4 @@ Looking at the final PIVOT – UNPIVOT table is little different from the origin
 
 This way we can get the original table back if aggregate functions was not applied on the data or data was in such form that aggregate function might have not made any difference.
 
-Reference : Pinal Dave (https://blog.sqlauthority.com), [SQL SERVER – UNPIVOT Table Example](https://blog.sqlauthority.com/2008/05/29/sql-server-unpivot-table-example/), [SQL SERVER – PIVOT Table Example](https://blog.sqlauthority.com/2008/05/22/sql-server-pivot-table-example/)
+Reference : Pinal Dave (<https://blog.sqlauthority.com>), [SQL SERVER – UNPIVOT Table Example](https://blog.sqlauthority.com/2008/05/29/sql-server-unpivot-table-example/), [SQL SERVER – PIVOT Table Example](https://blog.sqlauthority.com/2008/05/22/sql-server-pivot-table-example/)

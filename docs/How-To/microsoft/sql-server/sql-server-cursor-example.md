@@ -29,7 +29,7 @@ DECLARE @path VARCHAR(256) -- path for backup files
 DECLARE @fileName VARCHAR(256) -- filename for backup 
 DECLARE @fileDate VARCHAR(20) -- used for file name 
 
-SET @path = 'C:\Backup\' 
+SET @path = 'C:\Backup\' -- path to backup
 
 SELECT @fileDate = CONVERT(VARCHAR(20),GETDATE(),112) 
 
