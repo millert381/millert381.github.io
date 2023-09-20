@@ -1,5 +1,3 @@
-## SQL SERVER – PIVOT and UNPIVOT Table Examples
-
 > **Source:** [SQL SERVER – PIVOT and UNPIVOT Table Examples](https://blog.sqlauthority.com/2008/06/07/sql-server-pivot-and-unpivot-table-examples/)
 > **Author:** [Pinal Dave](https://blog.sqlauthority.com/author/pinaldave/)
 > **Publication Date:** 2008-06-07

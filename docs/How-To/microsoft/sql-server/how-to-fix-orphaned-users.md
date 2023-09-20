@@ -1,5 +1,3 @@
-## How to fix orphaned SQL Server users
-
 > **Source:** [How to fix orphaned SQL Server users](https://www.fileformat.info/tip/microsoft/sql_orphan_user.htm)
 > **Author:** Unknown
 > **Publication Date:** Unknown
@@ -22,13 +20,11 @@ First, make sure that this is the problem. This will lists the orphaned users:
 EXEC sp_change_users_login 'Report'
 ```
 
-
 If you already have a login id and password for this user, fix it by doing:
 
 ```sql
 EXEC sp_change_users_login 'Auto_Fix', 'user'
 ```
-
 
 If you want to create a new login id and password for this user, fix it by doing:
 

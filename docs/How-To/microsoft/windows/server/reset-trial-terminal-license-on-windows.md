@@ -24,5 +24,3 @@ Note: you must take ownership and give admin users full control to be able to de
 After a reboot the server should be working again for another 120 Days.
 
 Here is the [link](http://anilgprabhu.blogspot.com/2014/05/reset-trial-terminal-license-on-windows.html) to the original article.
-
-

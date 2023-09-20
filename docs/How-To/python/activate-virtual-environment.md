@@ -31,6 +31,7 @@ Once activated, you can install packages using `pip`, and they will be installed
 
 
 ## Practical Example
+
 On my machine, I have Python 2.7 and Python 3.7 installed. Initially, I was trying to install `mkdocs` and the `mkdocs-material` theme.  However, I was running into errors installing the packages required for the theme. The issue was related to the version of `pip` that was being used during the install. By creating a virtual environment for my mkdocs documentation project, I was able to avoid conflicts between the Python versions.
 
 Here's how to create and activate a virtual environment using Python 3:
