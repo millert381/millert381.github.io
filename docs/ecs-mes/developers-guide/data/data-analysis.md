@@ -52,9 +52,9 @@ Then, based on the *Counters* that are available, we calculate the number of uni
 
 | Infeed | Outfeed | Rejects | Formula |
 | ------ | ------- | ------- | ----------------------------- |
-| :heavy_check_mark: | :x: | :x: | `Infeed Count * Infeed Count Scale` |
-| :x: | :heavy_check_mark: | :x: | `Outfeed Count * Outfeed Scale` |
-| :x: | :heavy_check_mark: | :heavy_check_mark: | `(Outfeed Count * Outfeed Scale) + (Reject Count * Reject Count Scale)` |
+| ✔️     | ❌     | ❌     | `Infeed Count * Infeed Count Scale` |
+| ❌     | ✔️     | ✔️     | `(Outfeed Count * Outfeed Scale) + (Reject Count * Reject Count Scale)` |
+| ❌     | ✔️     | ❌     | `Outfeed Count * Outfeed Scale` |
 
 A counter is considered *not available* if the value has not changed over the analysis time frame.
 
