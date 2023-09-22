@@ -1,5 +1,12 @@
-> **Source:** [How to fix orphaned SQL Server users](https://www.fileformat.info/tip/microsoft/sql_orphan_user.htm)
-> **Author:** Unknown
+---
+tags:
+  - SQL
+---
+
+# Fix Orphaned Users
+
+> **Source:** [How to fix orphaned SQL Server users](https://www.fileformat.info/tip/microsoft/sql_orphan_user.htm)   
+> **Author:** Unknown   
 > **Publication Date:** Unknown
 
 ## Summary

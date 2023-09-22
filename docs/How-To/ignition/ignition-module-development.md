@@ -42,11 +42,13 @@ cd C:\Program Files\Java\jdk1.8.0_112\bin
 
 - Generate keystore and create a self-signed certificate in the keystore:
 
-	`keytool -genkey -keyalg RSA -alias selfsigned -keystore keystore.jks -storepass Kotter16 -validity 360 -keysize 2048`
+```shell
+keytool -genkey -keyalg RSA -alias selfsigned -keystore keystore.jks -storepass Kotter16 -validity 360 -keysize 2048
+```
 
 - Answer the prompts similar to the following:
 
-    ```shell
+```shell
     What is your first and last name?
       [Unknown]:  PM7510F.ecseng.com
     What is the name of your organizational unit?
@@ -63,7 +65,7 @@ cd C:\Program Files\Java\jdk1.8.0_112\bin
       [no]:  yes
 
     Enter key password for <selfsigned> (RETURN if same as keystore password):
-	```
+```
 
 - The "keystore.jks" file will be created in the same directory as the keytool.exe
   - Note: I moved the file to "C:\development\keystore"
@@ -88,9 +90,9 @@ For guidance setting up your development environment, refer to the Ignition SDK 
 
   - Switch to directory where the Ignition Module Signing Git repository should be cloned:
 
-    ```shell
+```shell
     cd c:\development\git
-    ```
+```
 
   - Clone the Git repository (I used Git for Windows):
   
@@ -104,13 +106,13 @@ For guidance setting up your development environment, refer to the Ignition SDK 
 - Invoke the Ignition Module Signer tool
   - Switch to the directory with the module-signer jar file:
   
-    ```shell
+```shell
     cd C:\development\git\module-signer\target
-    ```
+```
 
 - Sign your module using a command similar to one shown below. Note: This is the command used to build the DVR module, you will need to change the file paths and .modl file names based on your setup.
 
-    ```shell
+```shell
     java ^
         -jar module-signer-1.0.0-SNAPSHOT-jar-with-dependencies.jar ^
         -keystore=C:\development\keystore\keystore.jks ^
@@ -119,4 +121,4 @@ For guidance setting up your development environment, refer to the Ignition SDK 
         -chain=C:\development\keystore\selfsigned.p7b ^
         -module-in=C:\development\ecs-solutions\dvr-component\dvr-build\target\DVR-unsigned.modl ^
         -module-out=C:\development\ecs-solutions\dvr-component\dvr-build\target\DVR-signed.modl
-    ```
+```

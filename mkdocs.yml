@@ -1,4 +1,48 @@
 site_name: Everything In One Place
+
+nav:
+  - Home: index.md
+  - How-To:
+    - Ignition:
+      - Module Development: how-to/ignition/ignition-module-development.md
+    - Microsoft:
+      - SQL Server:
+        - how-to/microsoft/sql-server/how-to-install-sql-server-2019-windows.md
+        - how-to/microsoft/sql-server/how-to-fix-orphaned-users.md
+        - how-to/microsoft/sql-server/sql-server-cursor-example.md
+        - how-to/microsoft/sql-server/sql-server-pivot-and-unpivot-table-examples.md
+      - Windows:
+        - how-to/microsoft/windows/server/reset-trial-terminal-license-on-windows.md
+    - mkdocs:
+      - how-to/mkdocs/run-local-server.md
+    - Python:
+      - how-to/python/activate-virtual-environment.md
+  - ECS MES:
+    - Overview: ecs-mes/index.md
+    - System Requirements: ecs-mes/system-requirements.md
+    - Installation: ecs-mes/installation.md
+    - User's Guide: 
+      - Manage Users: ecs-mes/users-guide/manage-users.md
+      - Navigation: ecs-mes/users-guide/navigation.md
+    - Developer's Guide:
+      - Developer's Guide: ecs-mes/developers-guide/index.md
+      - Configuration:
+        - Configuration: ecs-mes/developers-guide/configuration/index.md
+        - Equipment Model:
+          - Overview: ecs-mes/developers-guide/configuration/equipment-model/index.md
+          - Equipment: ecs-mes/developers-guide/configuration/equipment-model/equipment.md
+          - States: ecs-mes/developers-guide/configuration/equipment-model/states.md
+          - Modes: ecs-mes/developers-guide/configuration/equipment-model/modes.md
+      - Data:
+        - ecs-mes/developers-guide/data/data-collection.md
+        - ecs-mes/developers-guide/data/data-analysis.md
+        - ecs-mes/developers-guide/data/dashboards.md
+        - ecs-mes/developers-guide/data/reports.md
+      - Application Design:
+        - ECS-MES Module: ecs-mes/developers-guide/modules/ecs-mes-module-development.md
+      
+      
+
 theme: 
     name: material
     palette: 
@@ -19,18 +63,18 @@ theme:
             name: Switch to dark mode
     features:
       - content.code.copy
-      - navigation.instant
-      - navigation.instant.prefetch
-      - navigation.tracking
-      - navigation.tabs
-      - navigation.tabs.sticky
-      - navigation.expand
-      - navigation.path
-      - navigation.prune
       - navigation.indexes
       - navigation.top
-      - toc.follow
+      - navigation.path
+      - navigation.tabs
+      - navigation.tabs.sticky
+      - navigation.instant
+      - navigation.instant.prefetch
+      - navigation.prune
+      - search
+
+
 extra_css:
   - stylesheets/extra.css   
-    
+
     

@@ -1,6 +1,13 @@
-> **Source:** [SQL Server Cursor Example](https://www.mssqltips.com/sqlservertip/1599/cursor-in-sql-server/)
-> **Author:** [Jeremy Kadlec](https://www.mssqltips.com/sqlserverauthor/38/jeremy-kadlec/)
-> **Publication Date:** 2020-12-31 (last updated as of 2023-09-20)
+---
+tags:
+  - SQL
+---
+
+# Cursor Example
+
+> **Source:** [SQL Server Cursor Example](https://www.mssqltips.com/sqlservertip/1599/cursor-in-sql-server/)   
+> **Author:** [Jeremy Kadlec](https://www.mssqltips.com/sqlserverauthor/38/jeremy-kadlec/)   
+> **Publication Date:** 2020-12-31 (last updated as of 2023-09-20)  
 
 ## Problem
 
